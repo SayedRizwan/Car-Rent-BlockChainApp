@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Driver Page</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-push-2">
+                <h1 class="text-center">Rent car dapp</h1>
+            </div>
+        </div>
+
+        <hr />
+        <br />
+
+
+        <hr />
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="input-group">
+                    <input type="text" class="form-control input-value" name="input" placeholder="New car..." value="">
+
+                    <input type="number" class="form-control input-price" name="input" placeholder="Price.." value="">
+
+					<label>Account:</label>
+                    <select id="wrapperAccounts" onchange="accountChanged()">
+                    </select>
+
+                    <div class="input-group-btn">
+                        <button type="button" name="button"
+                            data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Order"
+                            class="btn btn-default btn-value">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <br />
+
+        <div id="wrapperCars">
+        </div>
+
+    </div>
+
+    <div id="proposalCar" style="display:none;">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <h3 class="panel-title">Example</h3>
+                <br>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p>Price: <span class="price">0</span></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p>Owner: <span class="owner">0</span></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p>Rented by: <span class="rentedBy">0</span></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p>Available: <span class="available">0</span></p>
+                    </div>
+                    <div class="col-xs-6">
+                        <button type="button" name="button" data-car=""
+                            data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Order"
+                            class="btn btn-warning btn-rent">
+                            Rent
+                        </button>
+
+                        <button type="button" name="button" data-car=""
+                            data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Order"
+                            class="btn btn-warning btn-free">
+                            Free
+                        </button>
+
+                        <button type="button" name="button" data-car=""
+                            data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Order"
+                            class="btn btn-warning btn-remove">
+                            Remove
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr />
+        <br />
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
